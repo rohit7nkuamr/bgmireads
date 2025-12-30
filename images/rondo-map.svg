@@ -1,24 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
   <defs>
-    <linearGradient id="jungleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2d5a2d"/>
-      <stop offset="100%" style="stop-color:#1d4a1d"/>
+    <linearGradient id="rondoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a6741"/>
+      <stop offset="100%" style="stop-color:#3a5731"/>
     </linearGradient>
-    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1a5a7e"/>
       <stop offset="100%" style="stop-color:#0d4a6e"/>
     </linearGradient>
+    <linearGradient id="urbanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5a5a5a"/>
+      <stop offset="100%" style="stop-color:#4a4a4a"/>
+    </linearGradient>
   </defs>
   <!-- Ocean background -->
-  <rect width="800" height="800" fill="url(#seaGrad)"/>
-  <!-- Main jungle island -->
-  <ellipse cx="400" cy="400" rx="340" ry="330" fill="url(#jungleGrad)"/>
-  <!-- Rivers/water -->
-  <path d="M200,200 Q300,300 250,450 Q200,550 300,650" stroke="#1a5a7e" stroke-width="15" fill="none" opacity="0.8"/>
-  <path d="M550,150 Q500,300 550,400 Q600,500 500,600" stroke="#1a5a7e" stroke-width="12" fill="none" opacity="0.8"/>
-  <!-- Coastal bays -->
-  <ellipse cx="120" cy="400" rx="50" ry="80" fill="url(#seaGrad)" opacity="0.8"/>
-  <ellipse cx="680" cy="350" rx="45" ry="70" fill="url(#seaGrad)" opacity="0.8"/>
+  <rect width="800" height="800" fill="url(#waterGrad)"/>
+  <!-- Main island - Traditional Asian landscape -->
+  <ellipse cx="400" cy="400" rx="360" ry="350" fill="url(#rondoGrad)"/>
+  <!-- Urban areas -->
+  <ellipse cx="400" cy="300" rx="80" ry="60" fill="url(#urbanGrad)" opacity="0.6"/>
+  <ellipse cx="550" cy="450" rx="70" ry="50" fill="url(#urbanGrad)" opacity="0.6"/>
+  <ellipse cx="250" cy="500" rx="60" ry="45" fill="url(#urbanGrad)" opacity="0.6"/>
+  <!-- Rivers -->
+  <path d="M200,150 Q300,250 280,400 Q260,550 350,700" stroke="#1a5a7e" stroke-width="12" fill="none" opacity="0.7"/>
+  <path d="M600,100 Q550,300 580,450 Q610,600 500,750" stroke="#1a5a7e" stroke-width="10" fill="none" opacity="0.7"/>
   <!-- Grid lines -->
   <g stroke="#ffffff" stroke-width="0.5" opacity="0.2">
     <line x1="100" y1="0" x2="100" y2="800"/>
@@ -36,20 +41,25 @@
     <line x1="0" y1="600" x2="800" y2="600"/>
     <line x1="0" y1="700" x2="800" y2="700"/>
   </g>
-  <!-- Location markers -->
-  <g fill="#ffffff" opacity="0.7" font-family="Arial" font-size="12">
-    <text x="350" y="150">Bootcamp</text>
-    <text x="550" y="200">Paradise</text>
-    <text x="180" y="250">Khao</text>
-    <text x="300" y="300">Ruins</text>
-    <text x="500" y="320">Pai Nan</text>
-    <text x="200" y="400">Mongnai</text>
-    <text x="400" y="420">Quarry</text>
-    <text x="580" y="450">Ha Tinh</text>
-    <text x="250" y="550">Kampong</text>
-    <text x="450" y="580">Sahmee</text>
-    <text x="350" y="680">Docks</text>
+  <!-- Location markers - Accurate Rondo POIs -->
+  <g fill="#ffffff" opacity="0.7" font-family="Arial" font-size="11">
+    <text x="380" y="120">Stadium</text>
+    <text x="550" y="150">Neox Factory</text>
+    <text x="180" y="180">Min Hu</text>
+    <text x="300" y="220">Nan Chuan</text>
+    <text x="480" y="250">Rai An</text>
+    <text x="150" y="300">Bei Li</text>
+    <text x="400" y="320">Jao Tin</text>
+    <text x="600" y="330">Test Track</text>
+    <text x="250" y="400">Yu Lin</text>
+    <text x="450" y="420">Mey Ran</text>
+    <text x="580" y="460">Jadena City</text>
+    <text x="180" y="500">Hemay Town</text>
+    <text x="400" y="530">Rin Jiang</text>
+    <text x="550" y="570">Long Ho</text>
+    <text x="280" y="620">Tin Long Garden</text>
+    <text x="450" y="680">Hung Shan</text>
   </g>
   <!-- Map label -->
-  <text x="400" y="780" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="18" font-weight="bold">RONDO - 4x4 km</text>
+  <text x="400" y="780" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="18" font-weight="bold">RONDO - 8x8 km</text>
 </svg>
