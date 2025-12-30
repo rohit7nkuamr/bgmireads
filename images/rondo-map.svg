@@ -51,5 +51,5 @@
     <text x="350" y="680">Docks</text>
   </g>
   <!-- Map label -->
-  <text x="400" y="780" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="18" font-weight="bold">SANHOK - 4x4 km</text>
+  <text x="400" y="780" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="18" font-weight="bold">RONDO - 4x4 km</text>
 </svg>

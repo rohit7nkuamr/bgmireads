@@ -800,18 +800,257 @@ footer p {
     font-style: italic;
 }
 
-@media (max-width: 768px) {
-    .circle-legend {
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .timeline-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .meta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Header & Hero */
+    .hero {
+        padding: 20px 0;
+    }
+    
+    .hero h1, .glitch {
+        font-size: 1.5rem !important;
+        letter-spacing: 2px;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    
+    /* Map Selector Buttons */
+    .map-selector {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .map-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Map Header */
+    .map-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .map-header p {
+        font-size: 0.85rem;
+    }
+    
+    /* Interactive Map Section */
+    .interactive-map-section {
+        padding: 15px;
+    }
+    
+    .interactive-map-section h3 {
+        font-size: 1.1rem;
     }
     
     .zone-circle-toggle {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+    }
+    
+    .circle-btn {
+        width: 100%;
+        max-width: 280px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
     
     .phase-selector {
         flex-direction: column;
+        gap: 10px;
+    }
+    
+    .phase-select {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    /* Map with Circles */
+    .map-with-circles {
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    /* Circle Legend */
+    .circle-legend {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+    
+    .legend-item {
+        font-size: 0.75rem;
+    }
+    
+    .legend-color {
+        width: 15px;
+        height: 3px;
+    }
+    
+    /* Meta Toggle */
+    .meta-toggle {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .meta-btn {
+        width: 100%;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    /* Zone Timeline */
+    .zone-timeline h3 {
+        font-size: 1.1rem;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .timeline-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* Zone Cards */
+    .zone-card {
+        padding: 15px;
+    }
+    
+    .zone-phase {
+        font-size: 1rem;
+    }
+    
+    .zone-radius {
+        font-size: 0.8rem;
+        padding: 3px 6px;
+    }
+    
+    .zone-detail {
+        font-size: 0.85rem;
+    }
+    
+    .zone-damage {
+        font-size: 0.85rem;
+    }
+    
+    .zone-strategy {
+        font-size: 0.8rem;
+    }
+    
+    /* Strategy Tips */
+    .strategy-tips h3 {
+        font-size: 1.2rem;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .tip-card {
+        padding: 15px;
+    }
+    
+    .tip-card h4 {
+        font-size: 1rem;
+    }
+    
+    .tip-card p {
+        font-size: 0.85rem;
+    }
+    
+    /* Meta Analysis */
+    .meta-analysis h2 {
+        font-size: 1.5rem;
+    }
+    
+    .meta-card {
+        padding: 15px;
+    }
+    
+    .meta-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .meta-card li {
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 20px 15px;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+    }
+    
+    /* Badges */
+    .badge-current, .badge-upcoming {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .hero h1, .glitch {
+        font-size: 1.2rem !important;
+    }
+    
+    .map-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .circle-legend {
+        grid-template-columns: 1fr;
+    }
+    
+    .legend-item {
+        justify-content: center;
+    }
+    
+    .zone-card {
+        padding: 12px;
+    }
+    
+    .zone-phase {
+        font-size: 0.95rem;
+    }
+    
+    .meta-note {
+        font-size: 0.75rem;
+    }
+    
+    .map-note {
+        font-size: 0.75rem;
     }
 }
 
