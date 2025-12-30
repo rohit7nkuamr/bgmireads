@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGMI Zone Strategy Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <h1 class="glitch" data-text="BGMI ZONE STRATEGY HUB">BGMI ZONE STRATEGY HUB</h1>
+            <p class="subtitle">Master the Circle • Dominate the Game</p>
+            <div class="map-selector">
+                <button class="map-btn active" data-map="erangel">
+                    <i class="fas fa-map"></i> Erangel
+                </button>
+                <button class="map-btn" data-map="miramar">
+                    <i class="fas fa-sun"></i> Miramar
+                </button>
+                <button class="map-btn" data-map="sanhok">
+                    <i class="fas fa-leaf"></i> Sanhok
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="map-content" id="erangel">
+            <div class="map-header">
+                <h2><i class="fas fa-tree"></i> Erangel</h2>
+                <p>Classic battleground with diverse terrain and strategic positions | 8x8 km map</p>
+            </div>
+
+            <!-- Interactive Map with Zone Circles -->
+            <div class="interactive-map-section">
+                <h3>Zone Circle Visualization</h3>
+                <div class="zone-circle-toggle">
+                    <button class="circle-btn active" data-circle-meta="current">Current Meta Circles</button>
+                    <button class="circle-btn" data-circle-meta="upcoming">BGIS 2026 Circles</button>
+                </div>
+                <div class="phase-selector">
+                    <label>Select Phase:</label>
+                    <select class="phase-select" data-map="erangel">
+                        <option value="all">All Phases</option>
+                        <option value="1">Phase 1 (2275m)</option>
+                        <option value="2">Phase 2 (1485m)</option>
+                        <option value="3">Phase 3 (740m)</option>
+                        <option value="4">Phase 4 (370m)</option>
+                        <option value="5">Phase 5 (185m)</option>
+                        <option value="6">Phase 6 (92m)</option>
+                        <option value="7">Phase 7 (46m)</option>
+                        <option value="8">Phase 8 (23m)</option>
+                        <option value="9">Phase 9 (11m)</option>
+                    </select>
+                </div>
+                <div class="map-with-circles">
+                    <img src="https://pubgmap.io/img/maps/erangel.jpg" alt="Erangel Map" class="base-map" crossorigin="anonymous">
+                    <svg class="zone-circles-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                        <!-- Zone circles - white concentric circles like PMGC -->
+                        <circle class="zone-circle phase-1" cx="50" cy="50" r="45" data-phase="1" data-radius="2275m"/>
+                        <circle class="zone-circle phase-2" cx="50" cy="50" r="37" data-phase="2" data-radius="1485m"/>
+                        <circle class="zone-circle phase-3" cx="50" cy="50" r="28" data-phase="3" data-radius="740m"/>
+                        <circle class="zone-circle phase-4" cx="50" cy="50" r="20" data-phase="4" data-radius="370m"/>
+                        <circle class="zone-circle phase-5" cx="50" cy="50" r="14" data-phase="5" data-radius="185m"/>
+                        <circle class="zone-circle phase-6" cx="50" cy="50" r="9" data-phase="6" data-radius="92m"/>
+                        <circle class="zone-circle phase-7" cx="50" cy="50" r="5" data-phase="7" data-radius="46m"/>
+                        <circle class="zone-circle phase-8" cx="50" cy="50" r="3" data-phase="8" data-radius="23m"/>
+                        <circle class="zone-circle phase-9" cx="50" cy="50" r="1.5" data-phase="9" data-radius="11m"/>
+                    </svg>
+                    <div class="circle-legend">
+                        <div class="legend-item"><span class="legend-color phase-1-color"></span> Phase 1: 2275m</div>
+                        <div class="legend-item"><span class="legend-color phase-2-color"></span> Phase 2: 1485m</div>
+                        <div class="legend-item"><span class="legend-color phase-3-color"></span> Phase 3: 740m</div>
+                        <div class="legend-item"><span class="legend-color phase-4-color"></span> Phase 4: 370m</div>
+                        <div class="legend-item"><span class="legend-color phase-5-color"></span> Phase 5: 185m</div>
+                        <div class="legend-item"><span class="legend-color phase-6-color"></span> Phase 6: 92m</div>
+                        <div class="legend-item"><span class="legend-color phase-7-color"></span> Phase 7: 46m</div>
+                        <div class="legend-item"><span class="legend-color phase-8-color"></span> Phase 8: 23m</div>
+                        <div class="legend-item"><span class="legend-color phase-9-color"></span> Phase 9: 11m</div>
+                    </div>
+                </div>
+                <p class="map-note">Map size: 8x8 km (8000m) | Circles show zone radius at center</p>
+            </div>
+
+            <!-- Meta Toggle -->
+            <div class="meta-toggle">
+                <button class="meta-btn active" data-meta="current">Current Meta (BGIS 2025)</button>
+                <button class="meta-btn" data-meta="upcoming">BGIS 2026 (Upcoming)</button>
+            </div>
+            
+            <!-- CURRENT META (BGIS 2025) -->
+            <div class="zone-timeline meta-current">
+                <h3><span class="badge-current">Current Meta</span> Zone Timeline - Erangel</h3>
+                <p class="meta-note">Used in BGIS 2025, BMPS 2025, BMSD 2025 & BMIC 2025 (Latest: Nov 2025)</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 2275m (Diameter: 4550m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 270s (4:30)</div>
+                        <div class="zone-damage">Damage: 0.4% HP/s</div>
+                        <div class="zone-strategy">Extended move time - Plan rotations early</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 1485m (Diameter: 2970m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 0.6% HP/s</div>
+                        <div class="zone-strategy">Quick wait - Be ready to move fast</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 740m (Diameter: 1480m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 0.8% HP/s</div>
+                        <div class="zone-strategy">Secure mid-game position</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 370m (Diameter: 740m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Longer move - Use for repositioning</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 185m (Diameter: 370m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Control high ground for endgame</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 92m (Diameter: 185m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Extended final circles - Strategic plays</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 46m (Diameter: 92m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 90s (1:30)</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">Increased zone damage - Stay healthy</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 23m (Diameter: 46m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Final positioning critical</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 10s</div>
+                        <div class="zone-detail"><span>Move:</span> 160s (2:40)</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">End game - All out combat</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BGIS 2026 UPCOMING META -->
+            <div class="zone-timeline meta-upcoming hidden">
+                <h3><span class="badge-upcoming">BGIS 2026</span> Zone Timeline - Erangel</h3>
+                <p class="meta-note">Upcoming tournament - Grand Finals: March 27-29, 2026 | Prize Pool: ₹4 Crore</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 2275m (Diameter: 4550m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 300s (5:00)</div>
+                        <div class="zone-damage">Damage: 0.4% HP/s</div>
+                        <div class="zone-strategy">Long rotation window</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 1485m (Diameter: 2970m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 200s (3:20)</div>
+                        <div class="zone-detail"><span>Move:</span> 140s (2:20)</div>
+                        <div class="zone-damage">Damage: 0.6% HP/s</div>
+                        <div class="zone-strategy">Long wait - Loot and position</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 740m (Diameter: 1480m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 90s (1:30)</div>
+                        <div class="zone-damage">Damage: 0.8% HP/s</div>
+                        <div class="zone-strategy">Mid-game transitions</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 370m (Diameter: 740m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Quick zone shift</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 185m (Diameter: 370m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Fast closing circle</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 92m (Diameter: 185m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Rapid endgame</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 46m (Diameter: 92m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">Intense final fights</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 23m (Diameter: 46m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Survival mode</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 15s</div>
+                        <div class="zone-detail"><span>Move:</span> 15s</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">Final showdown</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-tips">
+                <h3>Erangel Strategy Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-mountain"></i>
+                        <h4>High Ground Advantage</h4>
+                        <p>Control elevated positions like mountains and buildings for better visibility</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-route"></i>
+                        <h4>Bridge Control</h4>
+                        <p>Secure bridges early to control rotations between major zones</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-binoculars"></i>
+                        <h4>Open Field Movement</h4>
+                        <p>Use smokes and vehicles for safe crossing of open areas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-content hidden" id="miramar">
+            <div class="map-header">
+                <h2><i class="fas fa-sun"></i> Miramar</h2>
+                <p>Desert warfare with long sightlines and sparse cover | 8x8 km map</p>
+            </div>
+
+            <!-- Interactive Map with Zone Circles -->
+            <div class="interactive-map-section">
+                <h3>Zone Circle Visualization</h3>
+                <div class="zone-circle-toggle">
+                    <button class="circle-btn active" data-circle-meta="current">Current Meta Circles</button>
+                    <button class="circle-btn" data-circle-meta="upcoming">BGIS 2026 Circles</button>
+                </div>
+                <div class="phase-selector">
+                    <label>Select Phase:</label>
+                    <select class="phase-select" data-map="miramar">
+                        <option value="all">All Phases</option>
+                        <option value="1">Phase 1 (2275m)</option>
+                        <option value="2">Phase 2 (1485m)</option>
+                        <option value="3">Phase 3 (740m)</option>
+                        <option value="4">Phase 4 (370m)</option>
+                        <option value="5">Phase 5 (185m)</option>
+                        <option value="6">Phase 6 (92m)</option>
+                        <option value="7">Phase 7 (46m)</option>
+                        <option value="8">Phase 8 (23m)</option>
+                        <option value="9">Phase 9 (11m)</option>
+                    </select>
+                </div>
+                <div class="map-with-circles">
+                    <img src="https://pubgmap.io/img/maps/miramar.jpg" alt="Miramar Map" class="base-map" crossorigin="anonymous">
+                    <svg class="zone-circles-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                        <circle class="zone-circle phase-1" cx="50" cy="50" r="45" data-phase="1" data-radius="2275m"/>
+                        <circle class="zone-circle phase-2" cx="50" cy="50" r="37" data-phase="2" data-radius="1485m"/>
+                        <circle class="zone-circle phase-3" cx="50" cy="50" r="28" data-phase="3" data-radius="740m"/>
+                        <circle class="zone-circle phase-4" cx="50" cy="50" r="20" data-phase="4" data-radius="370m"/>
+                        <circle class="zone-circle phase-5" cx="50" cy="50" r="14" data-phase="5" data-radius="185m"/>
+                        <circle class="zone-circle phase-6" cx="50" cy="50" r="9" data-phase="6" data-radius="92m"/>
+                        <circle class="zone-circle phase-7" cx="50" cy="50" r="5" data-phase="7" data-radius="46m"/>
+                        <circle class="zone-circle phase-8" cx="50" cy="50" r="3" data-phase="8" data-radius="23m"/>
+                        <circle class="zone-circle phase-9" cx="50" cy="50" r="1.5" data-phase="9" data-radius="11m"/>
+                    </svg>
+                    <div class="circle-legend">
+                        <div class="legend-item"><span class="legend-color phase-1-color"></span> Phase 1: 2275m</div>
+                        <div class="legend-item"><span class="legend-color phase-2-color"></span> Phase 2: 1485m</div>
+                        <div class="legend-item"><span class="legend-color phase-3-color"></span> Phase 3: 740m</div>
+                        <div class="legend-item"><span class="legend-color phase-4-color"></span> Phase 4: 370m</div>
+                        <div class="legend-item"><span class="legend-color phase-5-color"></span> Phase 5: 185m</div>
+                        <div class="legend-item"><span class="legend-color phase-6-color"></span> Phase 6: 92m</div>
+                        <div class="legend-item"><span class="legend-color phase-7-color"></span> Phase 7: 46m</div>
+                        <div class="legend-item"><span class="legend-color phase-8-color"></span> Phase 8: 23m</div>
+                        <div class="legend-item"><span class="legend-color phase-9-color"></span> Phase 9: 11m</div>
+                    </div>
+                </div>
+                <p class="map-note">Map size: 8x8 km (8000m) | Circles show zone radius at center</p>
+            </div>
+
+            <!-- Meta Toggle -->
+            <div class="meta-toggle">
+                <button class="meta-btn active" data-meta="current">Current Meta (BGIS 2025)</button>
+                <button class="meta-btn" data-meta="upcoming">BGIS 2026 (Upcoming)</button>
+            </div>
+            
+            <!-- CURRENT META (BGIS 2025) -->
+            <div class="zone-timeline meta-current">
+                <h3><span class="badge-current">Current Meta</span> Zone Timeline - Miramar</h3>
+                <p class="meta-note">Used in BGIS 2025, BMPS 2025, BMSD 2025 & BMIC 2025 (Latest: Nov 2025)</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 2275m (Diameter: 4550m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 270s (4:30)</div>
+                        <div class="zone-damage">Damage: 0.4% HP/s</div>
+                        <div class="zone-strategy">Vehicles essential - Long move window</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 1485m (Diameter: 2970m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 0.6% HP/s</div>
+                        <div class="zone-strategy">Quick wait - Secure compound early</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 740m (Diameter: 1480m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 0.8% HP/s</div>
+                        <div class="zone-strategy">Long range engagements begin</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 370m (Diameter: 740m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Extended move - Use for repositioning</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 185m (Diameter: 370m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Control ridges and compounds</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 92m (Diameter: 185m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 150s (2:30)</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Extended finals - Strategic positioning</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 46m (Diameter: 92m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 90s (1:30)</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">High damage - Keep HP full</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 23m (Diameter: 46m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Final positioning critical</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 10s</div>
+                        <div class="zone-detail"><span>Move:</span> 160s (2:40)</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">End game - All out combat</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BGIS 2026 UPCOMING META -->
+            <div class="zone-timeline meta-upcoming hidden">
+                <h3><span class="badge-upcoming">BGIS 2026</span> Zone Timeline - Miramar</h3>
+                <p class="meta-note">Upcoming tournament - Grand Finals: March 27-29, 2026 | Prize Pool: ₹4 Crore</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 2275m (Diameter: 4550m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 300s (5:00)</div>
+                        <div class="zone-damage">Damage: 0.4% HP/s</div>
+                        <div class="zone-strategy">Long rotation window</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 1485m (Diameter: 2970m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 200s (3:20)</div>
+                        <div class="zone-detail"><span>Move:</span> 140s (2:20)</div>
+                        <div class="zone-damage">Damage: 0.6% HP/s</div>
+                        <div class="zone-strategy">Long wait - Loot and position</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 740m (Diameter: 1480m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 90s (1:30)</div>
+                        <div class="zone-damage">Damage: 0.8% HP/s</div>
+                        <div class="zone-strategy">Mid-game transitions</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 370m (Diameter: 740m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Quick zone shift</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 185m (Diameter: 370m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Fast closing circle</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 92m (Diameter: 185m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Rapid endgame</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 46m (Diameter: 92m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">Intense final fights</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 23m (Diameter: 46m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 30s</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Survival mode</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 15s</div>
+                        <div class="zone-detail"><span>Move:</span> 15s</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">Final showdown</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-tips">
+                <h3>Miramar Strategy Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-car"></i>
+                        <h4>Vehicle Priority</h4>
+                        <p>Vehicles are crucial for long rotations across the desert</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-crosshairs"></i>
+                        <h4>Long Range Setup</h4>
+                        <p>Sniper rifles and 8x scopes dominate early-mid game</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-home"></i>
+                        <h4>Compound Control</h4>
+                        <p>Secure compounds with multiple buildings for tactical advantage</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-content hidden" id="sanhok">
+            <div class="map-header">
+                <h2><i class="fas fa-leaf"></i> Sanhok</h2>
+                <p>Dense jungle warfare with fast-paced action | 4x4 km map</p>
+            </div>
+
+            <!-- Interactive Map with Zone Circles -->
+            <div class="interactive-map-section">
+                <h3>Zone Circle Visualization</h3>
+                <div class="zone-circle-toggle">
+                    <button class="circle-btn active" data-circle-meta="current">Current Meta Circles</button>
+                    <button class="circle-btn" data-circle-meta="upcoming">BGIS 2026 Circles</button>
+                </div>
+                <div class="phase-selector">
+                    <label>Select Phase:</label>
+                    <select class="phase-select" data-map="sanhok">
+                        <option value="all">All Phases</option>
+                        <option value="1">Phase 1 (1135m)</option>
+                        <option value="2">Phase 2 (735m)</option>
+                        <option value="3">Phase 3 (367m)</option>
+                        <option value="4">Phase 4 (183m)</option>
+                        <option value="5">Phase 5 (91m)</option>
+                        <option value="6">Phase 6 (45m)</option>
+                        <option value="7">Phase 7 (22m)</option>
+                        <option value="8">Phase 8 (11m)</option>
+                        <option value="9">Phase 9 (5m)</option>
+                    </select>
+                </div>
+                <div class="map-with-circles">
+                    <img src="https://pubgmap.io/img/maps/savage.jpg" alt="Sanhok Map" class="base-map" crossorigin="anonymous">
+                    <svg class="zone-circles-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                        <circle class="zone-circle phase-1" cx="50" cy="50" r="45" data-phase="1" data-radius="1135m"/>
+                        <circle class="zone-circle phase-2" cx="50" cy="50" r="37" data-phase="2" data-radius="735m"/>
+                        <circle class="zone-circle phase-3" cx="50" cy="50" r="28" data-phase="3" data-radius="367m"/>
+                        <circle class="zone-circle phase-4" cx="50" cy="50" r="20" data-phase="4" data-radius="183m"/>
+                        <circle class="zone-circle phase-5" cx="50" cy="50" r="14" data-phase="5" data-radius="91m"/>
+                        <circle class="zone-circle phase-6" cx="50" cy="50" r="9" data-phase="6" data-radius="45m"/>
+                        <circle class="zone-circle phase-7" cx="50" cy="50" r="5" data-phase="7" data-radius="22m"/>
+                        <circle class="zone-circle phase-8" cx="50" cy="50" r="3" data-phase="8" data-radius="11m"/>
+                        <circle class="zone-circle phase-9" cx="50" cy="50" r="1.5" data-phase="9" data-radius="5m"/>
+                    </svg>
+                    <div class="circle-legend">
+                        <div class="legend-item"><span class="legend-color phase-1-color"></span> Phase 1: 1135m</div>
+                        <div class="legend-item"><span class="legend-color phase-2-color"></span> Phase 2: 735m</div>
+                        <div class="legend-item"><span class="legend-color phase-3-color"></span> Phase 3: 367m</div>
+                        <div class="legend-item"><span class="legend-color phase-4-color"></span> Phase 4: 183m</div>
+                        <div class="legend-item"><span class="legend-color phase-5-color"></span> Phase 5: 91m</div>
+                        <div class="legend-item"><span class="legend-color phase-6-color"></span> Phase 6: 45m</div>
+                        <div class="legend-item"><span class="legend-color phase-7-color"></span> Phase 7: 22m</div>
+                        <div class="legend-item"><span class="legend-color phase-8-color"></span> Phase 8: 11m</div>
+                        <div class="legend-item"><span class="legend-color phase-9-color"></span> Phase 9: 5m</div>
+                    </div>
+                </div>
+                <p class="map-note">Map size: 4x4 km (4000m) | Circles show zone radius at center</p>
+            </div>
+
+            <!-- Meta Toggle -->
+            <div class="meta-toggle">
+                <button class="meta-btn active" data-meta="current">Current Meta (BGIS 2025)</button>
+                <button class="meta-btn" data-meta="upcoming">BGIS 2026 (Upcoming)</button>
+            </div>
+            
+            <!-- CURRENT META (BGIS 2025) -->
+            <div class="zone-timeline meta-current">
+                <h3><span class="badge-current">Current Meta</span> Zone Timeline - Sanhok</h3>
+                <p class="meta-note">Used in BGIS 2025, BMPS 2025, BMSD 2025 & BMIC 2025 (Latest: Nov 2025)</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 1135m (Diameter: 2270m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 240s (4:00)</div>
+                        <div class="zone-damage">Damage: 0.5% HP/s</div>
+                        <div class="zone-strategy">Quick loot - Smaller map</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 735m (Diameter: 1470m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Secure jungle position early</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 367m (Diameter: 735m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Mid-game rotations critical</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 183m (Diameter: 367m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 100s (1:40)</div>
+                        <div class="zone-damage">Damage: 2.0% HP/s</div>
+                        <div class="zone-strategy">Dense cover - Use terrain</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 91m (Diameter: 183m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 80s (1:20)</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Control high ground</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 45m (Diameter: 91m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 50s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">Intense close quarters</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 22m (Diameter: 45m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 20s</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Rapid final circles</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 10s</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 8.0% HP/s</div>
+                        <div class="zone-strategy">Final positioning</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 5m (Diameter: 11m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 10s</div>
+                        <div class="zone-detail"><span>Move:</span> 100s (1:40)</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">End game showdown</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BGIS 2026 UPCOMING META -->
+            <div class="zone-timeline meta-upcoming hidden">
+                <h3><span class="badge-upcoming">BGIS 2026</span> Zone Timeline - Sanhok</h3>
+                <p class="meta-note">Upcoming tournament - Grand Finals: March 27-29, 2026 | Prize Pool: ₹4 Crore</p>
+                <div class="timeline-grid">
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 1</div>
+                        <div class="zone-radius"><span>Radius:</span> 1135m (Diameter: 2270m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 150s (2:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 240s (4:00)</div>
+                        <div class="zone-damage">Damage: 0.5% HP/s</div>
+                        <div class="zone-strategy">Longer wait time</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 2</div>
+                        <div class="zone-radius"><span>Radius:</span> 735m (Diameter: 1470m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 120s (2:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 1.0% HP/s</div>
+                        <div class="zone-strategy">Extended loot phase</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 3</div>
+                        <div class="zone-radius"><span>Radius:</span> 367m (Diameter: 735m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 90s (1:30)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 1.5% HP/s</div>
+                        <div class="zone-strategy">Mid-game positioning</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 4</div>
+                        <div class="zone-radius"><span>Radius:</span> 183m (Diameter: 367m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 60s (1:00)</div>
+                        <div class="zone-detail"><span>Move:</span> 120s (2:00)</div>
+                        <div class="zone-damage">Damage: 2.0% HP/s</div>
+                        <div class="zone-strategy">Faster rotations needed</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 5</div>
+                        <div class="zone-radius"><span>Radius:</span> 91m (Diameter: 183m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 45s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 3.0% HP/s</div>
+                        <div class="zone-strategy">Quick zone shifts</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 6</div>
+                        <div class="zone-radius"><span>Radius:</span> 45m (Diameter: 91m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 45s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 5.0% HP/s</div>
+                        <div class="zone-strategy">Close combat prep</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 7</div>
+                        <div class="zone-radius"><span>Radius:</span> 22m (Diameter: 45m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 45s</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 7.0% HP/s</div>
+                        <div class="zone-strategy">Intense endgame</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 8</div>
+                        <div class="zone-radius"><span>Radius:</span> 11m (Diameter: 22m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 45s</div>
+                        <div class="zone-detail"><span>Move:</span> 40s</div>
+                        <div class="zone-damage">Damage: 8.0% HP/s</div>
+                        <div class="zone-strategy">Survival mode</div>
+                    </div>
+                    <div class="zone-card">
+                        <div class="zone-phase">Phase 9</div>
+                        <div class="zone-radius"><span>Radius:</span> 5m (Diameter: 11m)</div>
+                        <div class="zone-detail"><span>Wait:</span> 30s</div>
+                        <div class="zone-detail"><span>Move:</span> 60s (1:00)</div>
+                        <div class="zone-damage">Damage: 10.0% HP/s</div>
+                        <div class="zone-strategy">Final showdown</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="strategy-tips">
+                <h3>Sanhok Strategy Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <i class="fas fa-tree"></i>
+                        <h4>Jungle Warfare</h4>
+                        <p>Use dense vegetation for cover and surprise attacks</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Fast-Paced Action</h4>
+                        <p>Smaller map means quicker engagements - Stay alert</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="fas fa-volume-up"></i>
+                        <h4>Sound Discipline</h4>
+                        <p>Footsteps travel far - Move strategically in jungle</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meta-analysis">
+            <h2>BGMI Esports Zone Meta Overview</h2>
+            <p class="meta-subtitle">Current competitive settings & upcoming BGIS 2026 tournament info</p>
+            <div class="meta-grid">
+                <div class="meta-card highlight-card">
+                    <h3>🎮 Current Meta (2025 Tournaments)</h3>
+                    <ul>
+                        <li><strong>Used In:</strong> BGIS, BMPS, BMSD & BMIC 2025</li>
+                        <li><strong>Shorter Wait Times:</strong> Phase 2 onwards reduced to 60s</li>
+                        <li><strong>Longer Move Times:</strong> Extended zone movement in mid-late game</li>
+                        <li><strong>Phase 7+ Damage:</strong> Increased - Edge players face pressure</li>
+                        <li><strong>Phase 9 Move:</strong> 160s move time for final circle</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>🏆 BGIS 2026 (Upcoming)</h3>
+                    <ul>
+                        <li><strong>Prize Pool:</strong> ₹4 Crore (~$480,000 USD) - DOUBLED!</li>
+                        <li><strong>Registrations:</strong> Now LIVE on esports.battlegroundsmobileindia.com</li>
+                        <li><strong>In-Game Qualifiers:</strong> January 8-14, 2026</li>
+                        <li><strong>Grand Finals:</strong> March 27-29, 2026 (LAN Event)</li>
+                        <li><strong>Maps:</strong> Erangel, Miramar, Sanhok</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>📅 BGIS 2026 Schedule</h3>
+                    <ul>
+                        <li><strong>The Grind:</strong> January 17 - February 1, 2026</li>
+                        <li><strong>League Stage:</strong> January 26 - March 8, 2026</li>
+                        <li><strong>Quarter Finals:</strong> February 26 - March 1, 2026</li>
+                        <li><strong>Semi Finals:</strong> March 12-15, 2026</li>
+                        <li><strong>Survival Stage:</strong> March 16-17, 2026</li>
+                    </ul>
+                </div>
+                <div class="meta-card">
+                    <h3>⚡ Pro Tips for Current Meta</h3>
+                    <ul>
+                        <li><strong>Carry More Boosts:</strong> Energy drinks essential for zone damage</li>
+                        <li><strong>Quick Loot:</strong> Less time to loot - prioritize efficiently</li>
+                        <li><strong>Aggressive Play:</strong> Faster circles favor aggressive teams</li>
+                        <li><strong>Team Coordination:</strong> Quick callouts for rapid rotations</li>
+                        <li><strong>Zone Prediction:</strong> Study circle patterns for positioning</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BGMI Zone Strategy Hub | Built for Competitive Teams</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="landGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d5a3d"/>
+      <stop offset="100%" style="stop-color:#2d4a2d"/>
+    </linearGradient>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a4a6e"/>
+      <stop offset="100%" style="stop-color:#0d3a5e"/>
+    </linearGradient>
+  </defs>
+  <!-- Ocean background -->
+  <rect width="800" height="800" fill="url(#waterGrad)"/>
+  <!-- Main island -->
+  <ellipse cx="400" cy="400" rx="350" ry="320" fill="url(#landGrad)"/>
+  <!-- Coastal details -->
+  <ellipse cx="150" cy="200" rx="80" ry="60" fill="url(#waterGrad)" opacity="0.7"/>
+  <ellipse cx="650" cy="600" rx="70" ry="50" fill="url(#waterGrad)" opacity="0.7"/>
+  <ellipse cx="400" cy="150" rx="100" ry="40" fill="url(#waterGrad)" opacity="0.5"/>
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.2">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+  <!-- Location markers -->
+  <g fill="#ffffff" opacity="0.6" font-family="Arial" font-size="12">
+    <text x="380" y="120">Stalber</text>
+    <text x="580" y="180">Kameshki</text>
+    <text x="150" y="250">Zharki</text>
+    <text x="300" y="280">Georgopol</text>
+    <text x="500" y="260">Yasnaya</text>
+    <text x="650" y="350">Lipovka</text>
+    <text x="200" y="400">Rozhok</text>
+    <text x="380" y="400">School</text>
+    <text x="550" y="420">Pochinki</text>
+    <text x="100" y="500">Gatka</text>
+    <text x="300" y="520">Mylta</text>
+    <text x="500" y="550">Farm</text>
+    <text x="650" y="500">Primorsk</text>
+    <text x="200" y="620">Novorepnoye</text>
+    <text x="400" y="680">Military Base</text>
+  </g>
+  <!-- Map label -->
+  <text x="400" y="780" text-anchor="middle" fill="#00d4ff" font-family="Arial" font-size="18" font-weight="bold">ERANGEL - 8x8 km</text>
+</svg>
