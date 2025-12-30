@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <linearGradient id="jungleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d5a2d"/>
+      <stop offset="100%" style="stop-color:#1d4a1d"/>
+    </linearGradient>
+    <linearGradient id="seaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5a7e"/>
+      <stop offset="100%" style="stop-color:#0d4a6e"/>
+    </linearGradient>
+  </defs>
+  <!-- Ocean background -->
+  <rect width="800" height="800" fill="url(#seaGrad)"/>
+  <!-- Main jungle island -->
+  <ellipse cx="400" cy="400" rx="340" ry="330" fill="url(#jungleGrad)"/>
+  <!-- Rivers/water -->
+  <path d="M200,200 Q300,300 250,450 Q200,550 300,650" stroke="#1a5a7e" stroke-width="15" fill="none" opacity="0.8"/>
+  <path d="M550,150 Q500,300 550,400 Q600,500 500,600" stroke="#1a5a7e" stroke-width="12" fill="none" opacity="0.8"/>
+  <!-- Coastal bays -->
+  <ellipse cx="120" cy="400" rx="50" ry="80" fill="url(#seaGrad)" opacity="0.8"/>
+  <ellipse cx="680" cy="350" rx="45" ry="70" fill="url(#seaGrad)" opacity="0.8"/>
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-width="0.5" opacity="0.2">
+    <line x1="100" y1="0" x2="100" y2="800"/>
+    <line x1="200" y1="0" x2="200" y2="800"/>
+    <line x1="300" y1="0" x2="300" y2="800"/>
+    <line x1="400" y1="0" x2="400" y2="800"/>
+    <line x1="500" y1="0" x2="500" y2="800"/>
+    <line x1="600" y1="0" x2="600" y2="800"/>
+    <line x1="700" y1="0" x2="700" y2="800"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="0" y1="500" x2="800" y2="500"/>
+    <line x1="0" y1="600" x2="800" y2="600"/>
+    <line x1="0" y1="700" x2="800" y2="700"/>
+  </g>
+  <!-- Location markers -->
+  <g fill="#ffffff" opacity="0.7" font-family="Arial" font-size="12">
+    <text x="350" y="150">Bootcamp</text>
+    <text x="550" y="200">Paradise</text>
+    <text x="180" y="250">Khao</text>
+    <text x="300" y="300">Ruins</text>
+    <text x="500" y="320">Pai Nan</text>
+    <text x="200" y="400">Mongnai</text>
+    <text x="400" y="420">Quarry</text>
+    <text x="580" y="450">Ha Tinh</text>
+    <text x="250" y="550">Kampong</text>
+    <text x="450" y="580">Sahmee</text>
+    <text x="350" y="680">Docks</text>
+  </g>
+  <!-- Map label -->
+  <text x="400" y="780" text-anchor="middle" fill="#00ff88" font-family="Arial" font-size="18" font-weight="bold">SANHOK - 4x4 km</text>
+</svg>
